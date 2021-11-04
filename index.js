@@ -30,6 +30,7 @@ app.get("/info", (req, res) => {
     tiktok.getUserProfileInfo(username, options).then(data => {
         console.log(data.user);
         return res.send({
+            status : 200,
             id : data.user.id,
             nickname : data.user.nickname,
             description : data.user.signature,
