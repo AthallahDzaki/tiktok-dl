@@ -34,7 +34,8 @@ app.get("/info", (req, res) => {
             nickname : data.user.nickname,
             description : data.user.signature,
             verified : data.user.verified,
-            avatar : data.user.avatarMedium
+            avatar : data.user.avatarMedium,
+            url : `https://www.tiktok.com/@${data.user.uniqueId}`
         });
     }).catch(e => {
         console.log(e);
